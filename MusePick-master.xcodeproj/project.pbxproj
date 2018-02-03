@@ -14,6 +14,9 @@
 		5EB4F8AD202605D300C1EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8AB202605D300C1EB0B /* LaunchScreen.storyboard */; };
 		5EB4F8B8202605D300C1EB0B /* MusePick_masterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8B7202605D300C1EB0B /* MusePick_masterTests.swift */; };
 		5EB4F8C3202605D400C1EB0B /* MusePick_masterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8C2202605D400C1EB0B /* MusePick_masterUITests.swift */; };
+		5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8D02026086C00C1EB0B /* LoginController.swift */; };
+		5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF61BB2026119A00F45790 /* EventLoginController.swift */; };
+		5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF61BD2026120200F45790 /* EventSongListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		5EB4F8BE202605D400C1EB0B /* MusePick-masterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MusePick-masterUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4F8C2202605D400C1EB0B /* MusePick_masterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusePick_masterUITests.swift; sourceTree = "<group>"; };
 		5EB4F8C4202605D400C1EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5EB4F8D02026086C00C1EB0B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		5ECF61BB2026119A00F45790 /* EventLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLoginController.swift; sourceTree = "<group>"; };
+		5ECF61BD2026120200F45790 /* EventSongListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				5EB4F8A9202605D300C1EB0B /* Assets.xcassets */,
 				5EB4F8AB202605D300C1EB0B /* LaunchScreen.storyboard */,
 				5EB4F8AE202605D300C1EB0B /* Info.plist */,
+				5EB4F8D02026086C00C1EB0B /* LoginController.swift */,
+				5ECF61BB2026119A00F45790 /* EventLoginController.swift */,
+				5ECF61BD2026120200F45790 /* EventSongListController.swift */,
 			);
 			path = "MusePick-master";
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */,
 				5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */,
+				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
 				5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */,
+				5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,28 +1,26 @@
 //
-//  ViewController.swift
+//  EventLoginController.swift
 //  MusePick-master
 //
 //  Created by Tal Mishaan on 03/02/2018.
 //  Copyright © 2018 Tal Mishaan. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
-class ViewController: UIViewController {
-
+class EventLoginController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        sleep(2)
-        self.performSegue(withIdentifier: "ShowLoginSegue", sender: self)
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
