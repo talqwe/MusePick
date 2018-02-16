@@ -11,6 +11,10 @@
 		5E6B7662203730100041E25D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6B76612037300F0041E25D /* GoogleService-Info.plist */; };
 		5E6B7696203748E60041E25D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B7695203748E60041E25D /* User.swift */; };
 		5E6B769820374CE80041E25D /* ModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B769720374CE80041E25D /* ModelFirebase.swift */; };
+		5E6B769C2037507E0041E25D /* UserSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B769B2037507E0041E25D /* UserSql.swift */; };
+		5E6B76B220375AF90041E25D /* DateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B120375AF90041E25D /* DateFirebase.swift */; };
+		5E6B76B420375C820041E25D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B320375C820041E25D /* Model.swift */; };
+		5E6B76B620375E5E0041E25D /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B520375E5E0041E25D /* SQLModel.swift */; };
 		5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */; };
 		5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A4202605D300C1EB0B /* ViewController.swift */; };
 		5EB4F8A8202605D300C1EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A6202605D300C1EB0B /* Main.storyboard */; };
@@ -97,6 +101,20 @@
 			remoteGlobalIDString = 2C9694647637E053031F938BC26AC23C;
 			remoteInfo = "Pods-MusePick-masterUITests";
 		};
+		5E6B76A92037507F0041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DB898BD8B912BAABE221D27748C34A4B;
+			remoteInfo = GTMSessionFetcher;
+		};
+		5E6B76AB2037507F0041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4478F755C6740CA3523469BAEDBA036F;
+			remoteInfo = "leveldb-library";
+		};
 		5EB4F8B4202605D300C1EB0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EB4F897202605D300C1EB0B /* Project object */;
@@ -123,21 +141,14 @@
 		561F875C54B473BCEE4885A0 /* Pods-MusePick-masterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-masterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-masterTests/Pods-MusePick-masterTests.release.xcconfig"; sourceTree = "<group>"; };
 		5E6B765F203702A80041E25D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5E6B76612037300F0041E25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5E6B7665203739A40041E25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5E6B7666203739A40041E25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		5E6B7668203739A40041E25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		5E6B766A203739A40041E25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5E6B766B203739A40041E25D /* EventLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLoginController.swift; sourceTree = "<group>"; };
-		5E6B766C203739A40041E25D /* EventSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSong.swift; sourceTree = "<group>"; };
-		5E6B766D203739A40041E25D /* EventSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongCell.swift; sourceTree = "<group>"; };
-		5E6B766E203739A40041E25D /* EventSongListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongListController.swift; sourceTree = "<group>"; };
-		5E6B766F203739A40041E25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5E6B7670203739A40041E25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5E6B7671203739A40041E25D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
-		5E6B7672203739A40041E25D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5E6B7673203739D80041E25D /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
 		5E6B7695203748E60041E25D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5E6B769720374CE80041E25D /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
+		5E6B769B2037507E0041E25D /* UserSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSql.swift; sourceTree = "<group>"; };
+		5E6B76AD203751EB0041E25D /* MusePick-master-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MusePick-master-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E6B76B120375AF90041E25D /* DateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFirebase.swift; sourceTree = "<group>"; };
+		5E6B76B320375C820041E25D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		5E6B76B520375E5E0041E25D /* SQLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
 		5EB4F89F202605D300C1EB0B /* MusePick-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusePick-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB4F8A4202605D300C1EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -192,28 +203,12 @@
 			children = (
 				5E6B7694203748BD0041E25D /* User */,
 				5E6B769720374CE80041E25D /* ModelFirebase.swift */,
+				5E6B76B120375AF90041E25D /* DateFirebase.swift */,
+				5E6B76B320375C820041E25D /* Model.swift */,
+				5E6B76B520375E5E0041E25D /* SQLModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
-		};
-		5E6B7664203739A40041E25D /* MusePick-master */ = {
-			isa = PBXGroup;
-			children = (
-				5E6B7665203739A40041E25D /* AppDelegate.swift */,
-				5E6B7666203739A40041E25D /* Assets.xcassets */,
-				5E6B7667203739A40041E25D /* LaunchScreen.storyboard */,
-				5E6B7669203739A40041E25D /* Main.storyboard */,
-				5E6B766B203739A40041E25D /* EventLoginController.swift */,
-				5E6B766C203739A40041E25D /* EventSong.swift */,
-				5E6B766D203739A40041E25D /* EventSongCell.swift */,
-				5E6B766E203739A40041E25D /* EventSongListController.swift */,
-				5E6B766F203739A40041E25D /* GoogleService-Info.plist */,
-				5E6B7670203739A40041E25D /* Info.plist */,
-				5E6B7671203739A40041E25D /* LoginController.swift */,
-				5E6B7672203739A40041E25D /* ViewController.swift */,
-			);
-			path = "MusePick-master";
-			sourceTree = SOURCE_ROOT;
 		};
 		5E6B7674203739D90041E25D /* Products */ = {
 			isa = PBXGroup;
@@ -224,6 +219,8 @@
 				5E6B7687203739D90041E25D /* FBSDKCoreKit.framework */,
 				5E6B7689203739D90041E25D /* FBSDKLoginKit.framework */,
 				5E6B768B203739D90041E25D /* GoogleToolboxForMac.framework */,
+				5E6B76AA2037507F0041E25D /* GTMSessionFetcher.framework */,
+				5E6B76AC2037507F0041E25D /* leveldb.framework */,
 				5E6B768D203739D90041E25D /* nanopb.framework */,
 				5E6B768F203739D90041E25D /* Pods_MusePick_master.framework */,
 				5E6B7691203739D90041E25D /* Pods_MusePick_masterTests.framework */,
@@ -236,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				5E6B7695203748E60041E25D /* User.swift */,
+				5E6B769B2037507E0041E25D /* UserSql.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -250,6 +248,7 @@
 				5EB4F8C1202605D400C1EB0B /* MusePick-masterUITests */,
 				5EB4F8A0202605D300C1EB0B /* Products */,
 				8E2107EDBC6116BD728BED70 /* Pods */,
+				5E6B76AD203751EB0041E25D /* MusePick-master-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -302,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				5E6B7673203739D80041E25D /* Pods.xcodeproj */,
-				5E6B7664203739A40041E25D /* MusePick-master */,
 				5E6B765F203702A80041E25D /* libsqlite3.0.tbd */,
 				16446C2D41ABD8E8489C1915 /* Pods_MusePick_master.framework */,
 				B9171353AB921A2980E46420 /* Pods_MusePick_masterTests.framework */,
@@ -401,6 +399,7 @@
 				TargetAttributes = {
 					5EB4F89E202605D300C1EB0B = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					5EB4F8B2202605D300C1EB0B = {
@@ -510,6 +509,20 @@
 			fileType = wrapper.framework;
 			path = Pods_MusePick_masterUITests.framework;
 			remoteRef = 5E6B7692203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B76AA2037507F0041E25D /* GTMSessionFetcher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTMSessionFetcher.framework;
+			remoteRef = 5E6B76A92037507F0041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B76AC2037507F0041E25D /* leveldb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = leveldb.framework;
+			remoteRef = 5E6B76AB2037507F0041E25D /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -713,13 +726,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6B76B620375E5E0041E25D /* SQLModel.swift in Sources */,
 				5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */,
+				5E6B76B220375AF90041E25D /* DateFirebase.swift in Sources */,
 				5E6B769820374CE80041E25D /* ModelFirebase.swift in Sources */,
 				5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */,
 				5E6B7696203748E60041E25D /* User.swift in Sources */,
+				5E6B76B420375C820041E25D /* Model.swift in Sources */,
 				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
 				5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */,
 				5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */,
+				5E6B769C2037507E0041E25D /* UserSql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -755,22 +772,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		5E6B7667203739A40041E25D /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E6B7668203739A40041E25D /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		5E6B7669203739A40041E25D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5E6B766A203739A40041E25D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5EB4F8A6202605D300C1EB0B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -902,17 +903,24 @@
 			baseConfigurationReference = 30EA59BAB7175AD2F90A4562 /* Pods-MusePick-master.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/Frameworks";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "MusePick-master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TM.MusePick-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusePick-master-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -923,17 +931,23 @@
 			baseConfigurationReference = 4D094D814FF5D0926DEA5453 /* Pods-MusePick-master.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 					"$(PROJECT_DIR)/Frameworks",
 				);
-				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/Frameworks";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
 				INFOPLIST_FILE = "MusePick-master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TM.MusePick-master";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MusePick-master-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
