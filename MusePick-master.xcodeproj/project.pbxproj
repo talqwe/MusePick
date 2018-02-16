@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6B7660203702C50041E25D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6B765F203702A80041E25D /* libsqlite3.0.tbd */; };
+		5E6B7662203730100041E25D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6B76612037300F0041E25D /* GoogleService-Info.plist */; };
+		5E6B7696203748E60041E25D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B7695203748E60041E25D /* User.swift */; };
+		5E6B769820374CE80041E25D /* ModelFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B769720374CE80041E25D /* ModelFirebase.swift */; };
 		5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */; };
 		5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A4202605D300C1EB0B /* ViewController.swift */; };
 		5EB4F8A8202605D300C1EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A6202605D300C1EB0B /* Main.storyboard */; };
@@ -17,9 +21,82 @@
 		5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8D02026086C00C1EB0B /* LoginController.swift */; };
 		5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF61BB2026119A00F45790 /* EventLoginController.swift */; };
 		5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ECF61BD2026120200F45790 /* EventSongListController.swift */; };
+		B4EA2848EC57E604DF8662D1 /* Pods_MusePick_masterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 510529FB24773C0D676B24BB /* Pods_MusePick_masterUITests.framework */; };
+		C7C89428C868B822FCA64657 /* Pods_MusePick_masterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9171353AB921A2980E46420 /* Pods_MusePick_masterTests.framework */; };
+		EDCE5E89CC439582EBFC41E5 /* Pods_MusePick_master.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 16446C2D41ABD8E8489C1915 /* Pods_MusePick_master.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5E6B7680203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EAE33500987F8C7FA9F481C5BDA872B5;
+			remoteInfo = Bolts;
+		};
+		5E6B7682203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 6E7B2DEBBC38AB140419BE2667627B30;
+			remoteInfo = FacebookCore;
+		};
+		5E6B7684203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 91296214869C5251FF383837A5769F75;
+			remoteInfo = FacebookLogin;
+		};
+		5E6B7686203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0CCA4C537D6D57C72842DD482137CCC1;
+			remoteInfo = FBSDKCoreKit;
+		};
+		5E6B7688203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 10B21A7931684C06F4160C8CF89C692B;
+			remoteInfo = FBSDKLoginKit;
+		};
+		5E6B768A203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 3FCD25C2317790EB10F8BB654704721F;
+			remoteInfo = GoogleToolboxForMac;
+		};
+		5E6B768C203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 46A5818A42B1C10A6495858F8BD35003;
+			remoteInfo = nanopb;
+		};
+		5E6B768E203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 962507B2FA9C89BEC1F6BED1E822FC27;
+			remoteInfo = "Pods-MusePick-master";
+		};
+		5E6B7690203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F3025C4FF2CAF1E668A68B3B5314953C;
+			remoteInfo = "Pods-MusePick-masterTests";
+		};
+		5E6B7692203739D90041E25D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2C9694647637E053031F938BC26AC23C;
+			remoteInfo = "Pods-MusePick-masterUITests";
+		};
 		5EB4F8B4202605D300C1EB0B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5EB4F897202605D300C1EB0B /* Project object */;
@@ -37,6 +114,30 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16446C2D41ABD8E8489C1915 /* Pods_MusePick_master.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusePick_master.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2422D79EAB7A1AD36EC7626C /* Pods-MusePick-masterUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-masterUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-masterUITests/Pods-MusePick-masterUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		30EA59BAB7175AD2F90A4562 /* Pods-MusePick-master.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-master.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-master/Pods-MusePick-master.debug.xcconfig"; sourceTree = "<group>"; };
+		3806CD84F65A367885B7BA0A /* Pods-MusePick-masterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-masterUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-masterUITests/Pods-MusePick-masterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D094D814FF5D0926DEA5453 /* Pods-MusePick-master.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-master.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-master/Pods-MusePick-master.release.xcconfig"; sourceTree = "<group>"; };
+		510529FB24773C0D676B24BB /* Pods_MusePick_masterUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusePick_masterUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		561F875C54B473BCEE4885A0 /* Pods-MusePick-masterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-masterTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-masterTests/Pods-MusePick-masterTests.release.xcconfig"; sourceTree = "<group>"; };
+		5E6B765F203702A80041E25D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5E6B76612037300F0041E25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E6B7665203739A40041E25D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E6B7666203739A40041E25D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E6B7668203739A40041E25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E6B766A203739A40041E25D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5E6B766B203739A40041E25D /* EventLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLoginController.swift; sourceTree = "<group>"; };
+		5E6B766C203739A40041E25D /* EventSong.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSong.swift; sourceTree = "<group>"; };
+		5E6B766D203739A40041E25D /* EventSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongCell.swift; sourceTree = "<group>"; };
+		5E6B766E203739A40041E25D /* EventSongListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongListController.swift; sourceTree = "<group>"; };
+		5E6B766F203739A40041E25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5E6B7670203739A40041E25D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E6B7671203739A40041E25D /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		5E6B7672203739A40041E25D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5E6B7673203739D80041E25D /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
+		5E6B7695203748E60041E25D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		5E6B769720374CE80041E25D /* ModelFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFirebase.swift; sourceTree = "<group>"; };
 		5EB4F89F202605D300C1EB0B /* MusePick-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusePick-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB4F8A4202605D300C1EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -53,6 +154,8 @@
 		5EB4F8D02026086C00C1EB0B /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		5ECF61BB2026119A00F45790 /* EventLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventLoginController.swift; sourceTree = "<group>"; };
 		5ECF61BD2026120200F45790 /* EventSongListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSongListController.swift; sourceTree = "<group>"; };
+		B9171353AB921A2980E46420 /* Pods_MusePick_masterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MusePick_masterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF1033215EF547C1735A76F3 /* Pods-MusePick-masterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MusePick-masterTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MusePick-masterTests/Pods-MusePick-masterTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +163,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6B7660203702C50041E25D /* libsqlite3.0.tbd in Frameworks */,
+				EDCE5E89CC439582EBFC41E5 /* Pods_MusePick_master.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +172,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7C89428C868B822FCA64657 /* Pods_MusePick_masterTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,19 +180,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4EA2848EC57E604DF8662D1 /* Pods_MusePick_masterUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6B7663203733AC0041E25D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B7694203748BD0041E25D /* User */,
+				5E6B769720374CE80041E25D /* ModelFirebase.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E6B7664203739A40041E25D /* MusePick-master */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B7665203739A40041E25D /* AppDelegate.swift */,
+				5E6B7666203739A40041E25D /* Assets.xcassets */,
+				5E6B7667203739A40041E25D /* LaunchScreen.storyboard */,
+				5E6B7669203739A40041E25D /* Main.storyboard */,
+				5E6B766B203739A40041E25D /* EventLoginController.swift */,
+				5E6B766C203739A40041E25D /* EventSong.swift */,
+				5E6B766D203739A40041E25D /* EventSongCell.swift */,
+				5E6B766E203739A40041E25D /* EventSongListController.swift */,
+				5E6B766F203739A40041E25D /* GoogleService-Info.plist */,
+				5E6B7670203739A40041E25D /* Info.plist */,
+				5E6B7671203739A40041E25D /* LoginController.swift */,
+				5E6B7672203739A40041E25D /* ViewController.swift */,
+			);
+			path = "MusePick-master";
+			sourceTree = SOURCE_ROOT;
+		};
+		5E6B7674203739D90041E25D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B7681203739D90041E25D /* Bolts.framework */,
+				5E6B7683203739D90041E25D /* FacebookCore.framework */,
+				5E6B7685203739D90041E25D /* FacebookLogin.framework */,
+				5E6B7687203739D90041E25D /* FBSDKCoreKit.framework */,
+				5E6B7689203739D90041E25D /* FBSDKLoginKit.framework */,
+				5E6B768B203739D90041E25D /* GoogleToolboxForMac.framework */,
+				5E6B768D203739D90041E25D /* nanopb.framework */,
+				5E6B768F203739D90041E25D /* Pods_MusePick_master.framework */,
+				5E6B7691203739D90041E25D /* Pods_MusePick_masterTests.framework */,
+				5E6B7693203739D90041E25D /* Pods_MusePick_masterUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E6B7694203748BD0041E25D /* User */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B7695203748E60041E25D /* User.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		5EB4F896202605D300C1EB0B = {
 			isa = PBXGroup;
 			children = (
+				5E6B7663203733AC0041E25D /* Model */,
+				5EFE54BE2037013600DD723E /* Frameworks */,
 				5EB4F8A1202605D300C1EB0B /* MusePick-master */,
 				5EB4F8B6202605D300C1EB0B /* MusePick-masterTests */,
 				5EB4F8C1202605D400C1EB0B /* MusePick-masterUITests */,
 				5EB4F8A0202605D300C1EB0B /* Products */,
+				8E2107EDBC6116BD728BED70 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +275,7 @@
 				5EB4F8D02026086C00C1EB0B /* LoginController.swift */,
 				5ECF61BB2026119A00F45790 /* EventLoginController.swift */,
 				5ECF61BD2026120200F45790 /* EventSongListController.swift */,
+				5E6B76612037300F0041E25D /* GoogleService-Info.plist */,
 			);
 			path = "MusePick-master";
 			sourceTree = "<group>";
@@ -134,6 +298,32 @@
 			path = "MusePick-masterUITests";
 			sourceTree = "<group>";
 		};
+		5EFE54BE2037013600DD723E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B7673203739D80041E25D /* Pods.xcodeproj */,
+				5E6B7664203739A40041E25D /* MusePick-master */,
+				5E6B765F203702A80041E25D /* libsqlite3.0.tbd */,
+				16446C2D41ABD8E8489C1915 /* Pods_MusePick_master.framework */,
+				B9171353AB921A2980E46420 /* Pods_MusePick_masterTests.framework */,
+				510529FB24773C0D676B24BB /* Pods_MusePick_masterUITests.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E2107EDBC6116BD728BED70 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30EA59BAB7175AD2F90A4562 /* Pods-MusePick-master.debug.xcconfig */,
+				4D094D814FF5D0926DEA5453 /* Pods-MusePick-master.release.xcconfig */,
+				BF1033215EF547C1735A76F3 /* Pods-MusePick-masterTests.debug.xcconfig */,
+				561F875C54B473BCEE4885A0 /* Pods-MusePick-masterTests.release.xcconfig */,
+				2422D79EAB7A1AD36EC7626C /* Pods-MusePick-masterUITests.debug.xcconfig */,
+				3806CD84F65A367885B7BA0A /* Pods-MusePick-masterUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,9 +331,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB4F8C7202605D400C1EB0B /* Build configuration list for PBXNativeTarget "MusePick-master" */;
 			buildPhases = (
+				1AC1D82399AF4A82EBA4621F /* [CP] Check Pods Manifest.lock */,
 				5EB4F89B202605D300C1EB0B /* Sources */,
 				5EB4F89C202605D300C1EB0B /* Frameworks */,
 				5EB4F89D202605D300C1EB0B /* Resources */,
+				D1F9908E10311FA8A8E3B229 /* [CP] Embed Pods Frameworks */,
+				1D9992B686FEB48E5D823FF1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -158,9 +351,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB4F8CA202605D400C1EB0B /* Build configuration list for PBXNativeTarget "MusePick-masterTests" */;
 			buildPhases = (
+				D37884F56679933EE9C1D501 /* [CP] Check Pods Manifest.lock */,
 				5EB4F8AF202605D300C1EB0B /* Sources */,
 				5EB4F8B0202605D300C1EB0B /* Frameworks */,
 				5EB4F8B1202605D300C1EB0B /* Resources */,
+				C47F19F86A20EAAA0BD33A07 /* [CP] Embed Pods Frameworks */,
+				E70F914561D99330D447C6A6 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -176,9 +372,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5EB4F8CD202605D400C1EB0B /* Build configuration list for PBXNativeTarget "MusePick-masterUITests" */;
 			buildPhases = (
+				7CA8ACA3AE4C968A746F04A6 /* [CP] Check Pods Manifest.lock */,
 				5EB4F8BA202605D400C1EB0B /* Sources */,
 				5EB4F8BB202605D400C1EB0B /* Frameworks */,
 				5EB4F8BC202605D400C1EB0B /* Resources */,
+				181E9A830AAF549643B2CF52 /* [CP] Embed Pods Frameworks */,
+				7D692A3A3E2FCF99FFFEADDB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -227,6 +426,12 @@
 			mainGroup = 5EB4F896202605D300C1EB0B;
 			productRefGroup = 5EB4F8A0202605D300C1EB0B /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5E6B7674203739D90041E25D /* Products */;
+					ProjectRef = 5E6B7673203739D80041E25D /* Pods.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				5EB4F89E202605D300C1EB0B /* MusePick-master */,
@@ -236,12 +441,86 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		5E6B7681203739D90041E25D /* Bolts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Bolts.framework;
+			remoteRef = 5E6B7680203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7683203739D90041E25D /* FacebookCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FacebookCore.framework;
+			remoteRef = 5E6B7682203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7685203739D90041E25D /* FacebookLogin.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FacebookLogin.framework;
+			remoteRef = 5E6B7684203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7687203739D90041E25D /* FBSDKCoreKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FBSDKCoreKit.framework;
+			remoteRef = 5E6B7686203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7689203739D90041E25D /* FBSDKLoginKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FBSDKLoginKit.framework;
+			remoteRef = 5E6B7688203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B768B203739D90041E25D /* GoogleToolboxForMac.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GoogleToolboxForMac.framework;
+			remoteRef = 5E6B768A203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B768D203739D90041E25D /* nanopb.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = nanopb.framework;
+			remoteRef = 5E6B768C203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B768F203739D90041E25D /* Pods_MusePick_master.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MusePick_master.framework;
+			remoteRef = 5E6B768E203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7691203739D90041E25D /* Pods_MusePick_masterTests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MusePick_masterTests.framework;
+			remoteRef = 5E6B7690203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5E6B7693203739D90041E25D /* Pods_MusePick_masterUITests.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Pods_MusePick_masterUITests.framework;
+			remoteRef = 5E6B7692203739D90041E25D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		5EB4F89D202605D300C1EB0B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5EB4F8AD202605D300C1EB0B /* LaunchScreen.storyboard in Resources */,
+				5E6B7662203730100041E25D /* GoogleService-Info.plist in Resources */,
 				5EB4F8AA202605D300C1EB0B /* Assets.xcassets in Resources */,
 				5EB4F8A8202605D300C1EB0B /* Main.storyboard in Resources */,
 			);
@@ -263,13 +542,181 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		181E9A830AAF549643B2CF52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-masterUITests/Pods-MusePick-masterUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1AC1D82399AF4A82EBA4621F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusePick-master-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D9992B686FEB48E5D823FF1 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-master/Pods-MusePick-master-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7CA8ACA3AE4C968A746F04A6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusePick-masterUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7D692A3A3E2FCF99FFFEADDB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-masterUITests/Pods-MusePick-masterUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C47F19F86A20EAAA0BD33A07 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-masterTests/Pods-MusePick-masterTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1F9908E10311FA8A8E3B229 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-master/Pods-MusePick-master-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookCore/FacebookCore.framework",
+				"${BUILT_PRODUCTS_DIR}/FacebookLogin/FacebookLogin.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FacebookLogin.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-master/Pods-MusePick-master-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D37884F56679933EE9C1D501 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MusePick-masterTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E70F914561D99330D447C6A6 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MusePick-masterTests/Pods-MusePick-masterTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5EB4F89B202605D300C1EB0B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */,
+				5E6B769820374CE80041E25D /* ModelFirebase.swift in Sources */,
 				5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */,
+				5E6B7696203748E60041E25D /* User.swift in Sources */,
 				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
 				5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */,
 				5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */,
@@ -308,6 +755,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E6B7667203739A40041E25D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E6B7668203739A40041E25D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		5E6B7669203739A40041E25D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E6B766A203739A40041E25D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		5EB4F8A6202605D300C1EB0B /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -436,9 +899,16 @@
 		};
 		5EB4F8C8202605D400C1EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30EA59BAB7175AD2F90A4562 /* Pods-MusePick-master.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = "MusePick-master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TM.MusePick-master";
@@ -450,9 +920,16 @@
 		};
 		5EB4F8C9202605D400C1EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D094D814FF5D0926DEA5453 /* Pods-MusePick-master.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited) $(PROJECT_DIR) $(PROJECT_DIR)/Frameworks";
 				INFOPLIST_FILE = "MusePick-master/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "TM.MusePick-master";
@@ -464,6 +941,7 @@
 		};
 		5EB4F8CB202605D400C1EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BF1033215EF547C1735A76F3 /* Pods-MusePick-masterTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -480,6 +958,7 @@
 		};
 		5EB4F8CC202605D400C1EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 561F875C54B473BCEE4885A0 /* Pods-MusePick-masterTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -496,6 +975,7 @@
 		};
 		5EB4F8CE202605D400C1EB0B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2422D79EAB7A1AD36EC7626C /* Pods-MusePick-masterUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -511,6 +991,7 @@
 		};
 		5EB4F8CF202605D400C1EB0B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3806CD84F65A367885B7BA0A /* Pods-MusePick-masterUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

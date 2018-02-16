@@ -1,0 +1,6 @@
+framework module Pods_MusePick_masterTests {
+  umbrella header "Pods-MusePick-masterTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
