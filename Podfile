@@ -11,6 +11,7 @@ target 'MusePick-master' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Auth'
 
   target 'MusePick-masterTests' do
     inherit! :search_paths
