@@ -139,6 +139,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="he2-iS-BPV"/>
                     </view>
+                    <connections>
+                        <segue destination="L6P-wo-SfI" kind="show" identifier="AfterLoginSegue" id="jCM-uh-8rK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbr-fr-9sS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

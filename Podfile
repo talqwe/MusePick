@@ -8,7 +8,7 @@ target 'MusePick-master' do
   # Pods for MusePick-master
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  pod 'Firebase/Core'
+  pod 'Firebase'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'

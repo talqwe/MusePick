@@ -60,7 +60,7 @@ extension User {
             sqlite3_bind_text(sqlite3_stmt, 5, login_type,-1,nil);
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
-                print("new row added succefully to students table")
+                print("New User Row Successfully Addded to LocalDB")
             }
         }
         sqlite3_finalize(sqlite3_stmt)

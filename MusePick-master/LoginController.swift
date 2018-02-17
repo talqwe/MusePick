@@ -31,14 +31,14 @@ class LoginController: UIViewController {
                 {
                     let credential = FacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
                     Auth.auth().signIn(with: credential)
-                    self.getFBUserData()
+                    self.GetFacebookData()
                 }
             }
         }
     }
     
     
-    func getFBUserData(){
+    func GetFacebookData(){
         if((FBSDKAccessToken.current()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
                 if (error != nil){
@@ -57,10 +57,10 @@ class LoginController: UIViewController {
                             Model.this_user = User(u: user!)
                         }
                         else{
-                            let encodedUserEmail=email.replacingOccurrences(of: ".", with: ",")
+                            let emailwithoutdots=email.replacingOccurrences(of: ".", with: ",")
 
 
-                            let user = User(email: encodedUserEmail, fn: first_name as! String, ln: last_name as! String, iu: "", lt: "FB") //register without image profile
+                            let user = User(email: emailwithoutdots, fn: first_name as! String, ln: last_name as! String, iu: "", lt: "FB") //register without image profile
                             Model.instance.addUser(u: User(u: user))
                             Model.this_user = User(u: user)
 
@@ -76,7 +76,8 @@ class LoginController: UIViewController {
                             }
 
                         }
-//                        self.goToNextPage(page: "MoveToAfterFBSignIn")
+//                        MOVE HERE
+                        self.performSegue(withIdentifier: "AfterLoginSegue", sender: self)
                     }
                 }
             })

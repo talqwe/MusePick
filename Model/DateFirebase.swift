@@ -21,14 +21,10 @@ extension Date {
     }
     
     func toFirebase()->Double{
-        return self.timeIntervalSince1970 * 1000
+        return floor(self.timeIntervalSince1970/1000000000) // Epoch in Sec
     }
     
     static func fromFirebase(_ interval:Double)->Date{
-        if (interval>100000000000){
-            return Date(timeIntervalSince1970: interval/1000)
-        }else{
-            return Date(timeIntervalSince1970: interval)
-        }
+        return Date(timeIntervalSince1970: (interval/1000000000))
     }
 }
