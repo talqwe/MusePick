@@ -12,6 +12,7 @@ import UIKit
 class Model {
     static let instance = Model()
     static var this_user = User()
+    static var this_event = Event()
     
     lazy var sql_model:SQLModel? = SQLModel()
     
@@ -34,16 +35,32 @@ class Model {
     }
     
     // add new User to local DB
-    func addNewUserToLocalDB(u:User){
+    func addNewUserToLocalDB(u: User){
         u.addUserToLocalDb(database: self.sql_model?.database)
+    }
+    
+    func addNewEventToLocalDB(e: Event){
+        e.addEventToLocalDb(database: self.sql_model?.database)
     }
     
     // gets an id of User and pull the data from firebase
     func getUserById(id:String, callback:@escaping (User?)->Void){
         let encodedID=id.replacingOccurrences(of: ".", with: ",")
-        ModelFirebase.getUserById(id: encodedID) { (st) in
-            if (st != nil) {
-                callback(st!)
+        ModelFirebase.getUserById(id: encodedID) { (u) in
+            if (u != nil) {
+                callback(u!)
+            } else {
+                callback(nil)
+            }
+            
+        }
+    }
+    
+    func getEventByCodeId(id:String, callback:@escaping (Event?)->Void){
+        let encodedID=id.replacingOccurrences(of: ".", with: ",")
+        ModelFirebase.getEventById(id: encodedID) { (e) in
+            if (e != nil) {
+                callback(e!)
             } else {
                 callback(nil)
             }

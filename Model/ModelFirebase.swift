@@ -32,6 +32,18 @@ class ModelFirebase {
         })
     }
     
+    static func getEventById(id:String, callback:@escaping (Event?)->Void){
+        let ref = Database.database().reference().child("events").child(id)
+        
+        ref.observeSingleEvent(of: .value, with: {(snapshot) in
+            let json = snapshot.value as? Dictionary<String,Any>
+            if (json != nil){
+                let u = Event(json: json!)
+                callback(u)
+            } else { callback(nil) }
+        })
+    }
+    
     static func clearObservers(){
         let ref = Database.database().reference().child("students")
         ref.removeAllObservers()
