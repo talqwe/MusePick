@@ -15,6 +15,9 @@
 		5E6B76B220375AF90041E25D /* DateFirebase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B120375AF90041E25D /* DateFirebase.swift */; };
 		5E6B76B420375C820041E25D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B320375C820041E25D /* Model.swift */; };
 		5E6B76B620375E5E0041E25D /* SQLModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76B520375E5E0041E25D /* SQLModel.swift */; };
+		5E6B76C9203889BE0041E25D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76C8203889BE0041E25D /* Event.swift */; };
+		5E6B76CB203889D00041E25D /* EventSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76CA203889D00041E25D /* EventSql.swift */; };
+		5E6B76D02039EF240041E25D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */; };
 		5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */; };
 		5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A4202605D300C1EB0B /* ViewController.swift */; };
 		5EB4F8A8202605D300C1EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A6202605D300C1EB0B /* Main.storyboard */; };
@@ -149,6 +152,9 @@
 		5E6B76B120375AF90041E25D /* DateFirebase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFirebase.swift; sourceTree = "<group>"; };
 		5E6B76B320375C820041E25D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		5E6B76B520375E5E0041E25D /* SQLModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQLModel.swift; sourceTree = "<group>"; };
+		5E6B76C8203889BE0041E25D /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		5E6B76CA203889D00041E25D /* EventSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventSql.swift; sourceTree = "<group>"; };
+		5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		5EB4F89F202605D300C1EB0B /* MusePick-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusePick-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5EB4F8A4202605D300C1EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -201,6 +207,7 @@
 		5E6B7663203733AC0041E25D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E6B76BB203889720041E25D /* Event */,
 				5E6B7694203748BD0041E25D /* User */,
 				5E6B769720374CE80041E25D /* ModelFirebase.swift */,
 				5E6B76B120375AF90041E25D /* DateFirebase.swift */,
@@ -238,9 +245,31 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		5E6B76BB203889720041E25D /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				5E6B76C8203889BE0041E25D /* Event.swift */,
+				5E6B76CA203889D00041E25D /* EventSql.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
+		5E6B76CC2039E84D0041E25D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5EB4F8D02026086C00C1EB0B /* LoginController.swift */,
+				5ECF61BB2026119A00F45790 /* EventLoginController.swift */,
+				5ECF61BD2026120200F45790 /* EventSongListController.swift */,
+				5EB4F8A4202605D300C1EB0B /* ViewController.swift */,
+				5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		5EB4F896202605D300C1EB0B = {
 			isa = PBXGroup;
 			children = (
+				5E6B76CC2039E84D0041E25D /* Controllers */,
 				5E6B7663203733AC0041E25D /* Model */,
 				5EFE54BE2037013600DD723E /* Frameworks */,
 				5EB4F8A1202605D300C1EB0B /* MusePick-master */,
@@ -266,14 +295,10 @@
 			isa = PBXGroup;
 			children = (
 				5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */,
-				5EB4F8A4202605D300C1EB0B /* ViewController.swift */,
 				5EB4F8A6202605D300C1EB0B /* Main.storyboard */,
 				5EB4F8A9202605D300C1EB0B /* Assets.xcassets */,
 				5EB4F8AB202605D300C1EB0B /* LaunchScreen.storyboard */,
 				5EB4F8AE202605D300C1EB0B /* Info.plist */,
-				5EB4F8D02026086C00C1EB0B /* LoginController.swift */,
-				5ECF61BB2026119A00F45790 /* EventLoginController.swift */,
-				5ECF61BD2026120200F45790 /* EventSongListController.swift */,
 				5E6B76612037300F0041E25D /* GoogleService-Info.plist */,
 			);
 			path = "MusePick-master";
@@ -730,12 +755,15 @@
 				5ECF61BC2026119A00F45790 /* EventLoginController.swift in Sources */,
 				5E6B76B220375AF90041E25D /* DateFirebase.swift in Sources */,
 				5E6B769820374CE80041E25D /* ModelFirebase.swift in Sources */,
+				5E6B76C9203889BE0041E25D /* Event.swift in Sources */,
+				5E6B76CB203889D00041E25D /* EventSql.swift in Sources */,
 				5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */,
 				5E6B7696203748E60041E25D /* User.swift in Sources */,
 				5E6B76B420375C820041E25D /* Model.swift in Sources */,
 				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
 				5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */,
 				5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */,
+				5E6B76D02039EF240041E25D /* UIViewControllerExt.swift in Sources */,
 				5E6B769C2037507E0041E25D /* UserSql.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

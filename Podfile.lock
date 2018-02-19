@@ -17,6 +17,8 @@ PODS:
     - Bolts (~> 1.7)
   - FBSDKLoginKit (4.30.0):
     - FBSDKCoreKit
+  - Firebase (4.9.0):
+    - Firebase/Core (= 4.9.0)
   - Firebase/Auth (4.9.0):
     - Firebase/Core
     - FirebaseAuth (= 4.4.3)
@@ -71,8 +73,8 @@ PODS:
 DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
+  - Firebase
   - Firebase/Auth
-  - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
 
@@ -94,6 +96,6 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
 
-PODFILE CHECKSUM: e147b38eda7fa77faae41f07b71fd0b536335d37
+PODFILE CHECKSUM: dcb6b74acac85b441c33ab86aab8d55f29e45c53
 
 COCOAPODS: 1.4.0
