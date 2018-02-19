@@ -50,13 +50,17 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <state key="normal" title="Let's Rock!"/>
                                 <connections>
-                                    <segue destination="kcy-XM-Mqe" kind="show" id="rQO-yS-2JC"/>
+                                    <action selector="LetsRock:" destination="L6P-wo-SfI" eventType="touchUpInside" id="Lct-Sy-mZF"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ZnQ-5z-RI3"/>
                     </view>
+                    <connections>
+                        <outlet property="EventCode" destination="Yif-NJ-oIE" id="vaf-Qy-9IX"/>
+                        <segue destination="kcy-XM-Mqe" kind="show" identifier="AfterEventLoginSegue" id="lvB-K7-dmM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gsd-AY-GCm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
