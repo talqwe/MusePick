@@ -10,6 +10,7 @@
 		5E2CF108203B776E00A84125 /* SongTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF107203B776E00A84125 /* SongTableViewCell.swift */; };
 		5E2CF10B203B788800A84125 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF10A203B788800A84125 /* Song.swift */; };
 		5E2CF10D203B967700A84125 /* SongSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF10C203B967700A84125 /* SongSql.swift */; };
+		5E2CF10F203F471B00A84125 /* AddSongController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E2CF10E203F471B00A84125 /* AddSongController.swift */; };
 		5E6B7660203702C50041E25D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E6B765F203702A80041E25D /* libsqlite3.0.tbd */; };
 		5E6B7662203730100041E25D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5E6B76612037300F0041E25D /* GoogleService-Info.plist */; };
 		5E6B7696203748E60041E25D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B7695203748E60041E25D /* User.swift */; };
@@ -148,6 +149,7 @@
 		5E2CF107203B776E00A84125 /* SongTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableViewCell.swift; sourceTree = "<group>"; };
 		5E2CF10A203B788800A84125 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
 		5E2CF10C203B967700A84125 /* SongSql.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongSql.swift; sourceTree = "<group>"; };
+		5E2CF10E203F471B00A84125 /* AddSongController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSongController.swift; sourceTree = "<group>"; };
 		5E6B765F203702A80041E25D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5E6B76612037300F0041E25D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5E6B7673203739D80041E25D /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = SOURCE_ROOT; };
@@ -279,6 +281,7 @@
 				5EB4F8A4202605D300C1EB0B /* ViewController.swift */,
 				5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */,
 				5E2CF107203B776E00A84125 /* SongTableViewCell.swift */,
+				5E2CF10E203F471B00A84125 /* AddSongController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				5E6B7696203748E60041E25D /* User.swift in Sources */,
 				5E6B76B420375C820041E25D /* Model.swift in Sources */,
 				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
+				5E2CF10F203F471B00A84125 /* AddSongController.swift in Sources */,
 				5E2CF10D203B967700A84125 /* SongSql.swift in Sources */,
 				5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */,
 				5ECF61BE2026120200F45790 /* EventSongListController.swift in Sources */,

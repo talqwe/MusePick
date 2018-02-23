@@ -12,6 +12,7 @@ import UIKit
 class EventLoginController: UIViewController {
     
     @IBOutlet weak var EventCode: UITextField!
+    
     @IBAction func LetsRock(_ sender: UIButton) {
         let input_code_id = EventCode.text!
         if(input_code_id != ""){
@@ -26,24 +27,18 @@ class EventLoginController: UIViewController {
                 }
         }
         }else{
-            messageBox(messageTitle: "Error", messageAlert: "Please insert Event Code", messageBoxStyle: .alert, alertActionStyle: UIAlertActionStyle.default) {
+            self.messageBox(messageTitle: "Error", messageAlert: "Please insert Event Code", messageBoxStyle: .alert, alertActionStyle: UIAlertActionStyle.default) {
             }
         }
         
     }
     
-    func messageBox(messageTitle: String, messageAlert: String, messageBoxStyle: UIAlertControllerStyle, alertActionStyle: UIAlertActionStyle, completionHandler: @escaping () -> Void)
-    {
-        let alert = UIAlertController(title: messageTitle, message: messageAlert, preferredStyle: messageBoxStyle)
-        
-        let okAction = UIAlertAction(title: "Ok", style: alertActionStyle) { _ in
-            completionHandler()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationViewController = segue.destination as? EventSongListController {
+            destinationViewController.event_id = EventCode.text!
         }
-        
-        alert.addAction(okAction)
-        
-        present(alert, animated: true, completion: nil)
     }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
