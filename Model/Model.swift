@@ -124,4 +124,15 @@ class Model {
         let filename = getDocumentsDirectory().appendingPathComponent(name)
         return UIImage(contentsOfFile:filename.path)
     }
+    
+    
+    func addSong(s: Song){
+        ModelFirebase.AddSong(s: s){(error) in}
+        s.addSongToLocalDb(database: self.sql_model?.database)
+    }
+    
+    func addNewSongToLocalDB(s: Song){
+        s.addSongToLocalDb(database: self.sql_model?.database)
+    }
+    
 }

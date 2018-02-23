@@ -43,24 +43,23 @@ extension Song {
             + Song.NAME + ","
             + Song.ANAME + ","
             + Song.ALBUM + ","
-            + Song.LIKES + ","
-            + Song.LAST + ") VALUES (?,?,?,?,?);"
+            + Song.LIKES + ") VALUES (?,?,?,?,?);"
             , -1, &sqlite3_stmt, nil) == SQLITE_OK){
             
-            let email = self.event_id.cString(using: .utf8)
-            let fn = self.song_name.cString(using: .utf8)
-            let ln = self.artist_name.cString(using: .utf8)
-            var image_url = "".cString(using: .utf8)
-            let like_counter = self.like_counter.cString(using: .utf8)
-            if self.image_url != nil {
-                image_url = self.image_url!.cString(using: .utf8)
+            let event_id = self.event_id.cString(using: .utf8)
+            let sn = self.song_name.cString(using: .utf8)
+            let an = self.artist_name.cString(using: .utf8)
+            var image = "".cString(using: .utf8)
+            let like_counter = Int32(self.like_counter)
+            if self.image != nil {
+                image = self.image?.cString(using: .utf8)
             }
             
-            sqlite3_bind_text(sqlite3_stmt, 1, email,-1,nil);
-            sqlite3_bind_text(sqlite3_stmt, 2, fn,-1,nil);
-            sqlite3_bind_text(sqlite3_stmt, 3, ln,-1,nil);
-            sqlite3_bind_text(sqlite3_stmt, 4, image_url,-1,nil);
-            sqlite3_bind_text(sqlite3_stmt, 5, login_type,-1,nil);
+            sqlite3_bind_text(sqlite3_stmt, 1, event_id,-1,nil);
+            sqlite3_bind_text(sqlite3_stmt, 2, sn,-1,nil);
+            sqlite3_bind_text(sqlite3_stmt, 3, an,-1,nil);
+            sqlite3_bind_text(sqlite3_stmt, 4, image,-1,nil);
+            sqlite3_bind_int(sqlite3_stmt, 5, like_counter);
             
             if(sqlite3_step(sqlite3_stmt) == SQLITE_DONE){
                 print("New Song Row Successfully Addded to LocalDB")

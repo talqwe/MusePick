@@ -24,4 +24,17 @@ extension UIViewController
     {
         view.endEditing(true)
     }
+    
+    func messageBox(messageTitle: String, messageAlert: String, messageBoxStyle: UIAlertControllerStyle, alertActionStyle: UIAlertActionStyle, completionHandler: @escaping () -> Void)
+    {
+        let alert = UIAlertController(title: messageTitle, message: messageAlert, preferredStyle: messageBoxStyle)
+        
+        let okAction = UIAlertAction(title: "Ok", style: alertActionStyle) { _ in
+            completionHandler()
+        }
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true, completion: nil)
+    }
 }

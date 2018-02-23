@@ -20,6 +20,14 @@ class ModelFirebase {
         }
     }
     
+    static func AddSong(s:Song, completionBlock:@escaping (Error?)->Void){
+        let ref = Database.database().reference().child("songs").child(s.event_id+":"+s.artist_name+":"+s.song_name)
+        ref.setValue(s.toFirebase())
+        ref.setValue(s.toFirebase()){(error, dbref) in
+            completionBlock(error)
+        }
+    }
+    
     static func getUserById(id:String, callback:@escaping (User?)->Void){
         let ref = Database.database().reference().child("users").child(id)
         
