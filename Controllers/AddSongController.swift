@@ -15,6 +15,7 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var SelfieButton: UIButton!
     var image_changed: Int = 0
     var event_id: String = ""
+    var user_email: String = ""
     
     @IBAction func TakeASelfie(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -49,16 +50,19 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
         let artist = ArtistNameInput.text!
 
         if(song_name != "" && artist != "" && image_changed == 1){
-            let s = Song(event_id: event_id, song_name: song_name, artist_name: artist, image: "", like_counter: 1, last_update: Date())
+            let s = Song(event_id: Model.this_event.id_code, song_name: song_name, artist_name: artist, image: "", last_update: Date.fromFirebase(Date().toFirebase()))
             
             let image = SelfieButton.backgroundImage(for: UIControlState.normal)
             
             Model.instance.saveImage(image: image!, name:"image:user:"+Model.this_user.email){(url) in
                 s.image = url
-                Model.instance.addSong(s: s)
+                Model.instance.addSong(s: s, email: self.user_email)
                 
             }
-        self.messageBox(messageTitle: "Error", messageAlert: "Please insert all details", messageBoxStyle: .alert, alertActionStyle: UIAlertActionStyle.default) {
+            
+            self.navigationController?.popToRootViewController(animated: true)
+        }else{
+            self.messageBox(messageTitle: "Error", messageAlert: "Please insert all details", messageBoxStyle: .alert, alertActionStyle: UIAlertActionStyle.default) {
             }
         }
     }
