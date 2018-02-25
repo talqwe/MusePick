@@ -12,7 +12,8 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     var event_id: String = ""
-    var data = ["A","B","C","D","E","F","G"]
+    var user_email: String = ""
+    var data = [Song]()
 
     
     @IBAction func AddSong(_ sender: Any) {
@@ -27,7 +28,8 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: SongTableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "song_cell") as! SongTableViewCell
-        cell.ArtistSongName?.text = data[indexPath.row]
+        let song = data[indexPath.row]
+        cell.ArtistSongName.text = song.artist_name+" - "+song.song_name
 
         return cell
     }
@@ -38,11 +40,24 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? AddSongController {
             destinationViewController.event_id = event_id
+            destinationViewController.user_email = self.user_email
         }
     }
     
     override func viewDidLoad() {
 //        self.tableView.tableHeaderView = "Tal";
+        Model.getAllSongsAndObserve(eventID: event_id)
+        _ = ModelNotification.SongList.observe { (list) in
+            if list != nil {
+                self.data = list!
+                self.tableView.reloadData()
+            }
+        }
+//        NotificationCenter.default.addObserver(self, selector:
+//            #selector(ViewController.songsListDidUpdate),
+//                                               name: NSNotification.Name(rawValue: notifySongListUpdate),object: nil)
+//        Model.instance.getAllSongsAndObserve(eventID: event_id)
+        
         self.tableView.frame = CGRect(x:0,y:10, width:self.view.frame.width,height:self.view.frame.height - 40);
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -50,6 +65,7 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         self.view.addSubview(self.tableView)
+        
         
 //        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
