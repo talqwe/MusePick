@@ -8,6 +8,37 @@
 
 import Foundation
 import UIKit
+import Firebase
+
+let notifySongListUpdate = "com.musepick.NotifySongListUpdate"
+
+class ModelNotificationBase<T>{
+    var name:String?
+    
+    init(name:String){
+        self.name = name
+    }
+    
+    func observe(callback:@escaping (T?)->Void)->Any{
+        return NotificationCenter.default.addObserver(forName: NSNotification.Name(name!), object: nil, queue: nil) { (data) in
+            if let data = data.userInfo?["data"] as? T {
+                callback(data)
+            }
+        }
+    }
+    
+    func post(data:T){
+        NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
+    }
+}
+
+class ModelNotification{
+    static let SongList = ModelNotificationBase<[Song]>(name: "SongListNotification")
+    
+    static func removeObserver(observer:Any){
+        NotificationCenter.default.removeObserver(observer)
+    }
+}
 
 class Model {
     static let instance = Model()
@@ -21,7 +52,6 @@ class Model {
     }
     
     func clear(){
-        print("Model.clear")
         ModelFirebase.clearObservers()
     }
     
@@ -66,6 +96,20 @@ class Model {
             }
             
         }
+    }
+    
+    func getSongsByEventId(id:String, callback:@escaping ([Song]?)->Void){
+        let encodedID=id.replacingOccurrences(of: ".", with: ",")
+        ModelFirebase.getSongsByEventID(eventID: encodedID) { (s) in
+            callback(s)
+        }
+    }
+    
+    static func getAllSongsAndObserve(eventID: String) {
+        ModelFirebase.getSongsByEventID(eventID: eventID, callback: { (list) in
+            ModelNotification.SongList.post(data: list!)
+        })
+        
     }
     
     // saves the profile image to firebase (storage) and local DB
@@ -125,10 +169,18 @@ class Model {
         return UIImage(contentsOfFile:filename.path)
     }
     
+    func addLike(s: Song, email: String){
+        let like = Like(event_id: s.event_id, song_name: s.song_name, artist_name: s.artist_name, user_email: email)
+
+        ModelFirebase.AddLike(l: like){(error) in}
+        like.addLikeToLocalDb(database: self.sql_model?.database)
+    }
     
-    func addSong(s: Song){
+    func addSong(s: Song, email: String){
         ModelFirebase.AddSong(s: s){(error) in}
         s.addSongToLocalDb(database: self.sql_model?.database)
+        
+        self.addLike(s: s, email: email)
     }
     
     func addNewSongToLocalDB(s: Song){
