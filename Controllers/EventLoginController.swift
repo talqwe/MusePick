@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class EventLoginController: UIViewController {
-    var user_email: String = ""
     
     @IBOutlet weak var EventCode: UITextField!
     
@@ -37,14 +36,6 @@ class EventLoginController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? EventSongListController {
             destinationViewController.event_id = EventCode.text!
-            destinationViewController.user_email = self.user_email
-        }
-    }
-    
-    @objc func songsListDidUpdate(notification:NSNotification){
-        let songs = notification.userInfo?["songs"] as! [Song]
-        for s in songs {
-            print("name: \(s.artist_name) \(s.song_name)")
         }
     }
     

@@ -13,7 +13,6 @@ import FBSDKLoginKit
 import FacebookCore
 
 class LoginController: UIViewController {
-    var user_email: String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -50,13 +49,12 @@ class LoginController: UIViewController {
                     let first_name = data["first_name"]!
                     let last_name = data["last_name"]!
                     
-                    self.user_email = email as! String
-
                     Model.instance.getUserById(id: email as! String) { (user) in
                         if(user != nil){
                             // save to sqlite
                             Model.instance.addNewUserToLocalDB(u: user!)
                             Model.this_user = User(u: user!)
+                            ModelNotification.UserData.post(data: user!)
                         }
                         else{
                             let emailwithoutdots=email.replacingOccurrences(of: ".", with: ",")
@@ -76,6 +74,9 @@ class LoginController: UIViewController {
                                 Model.instance.addUser(u: Model.this_user) //+imageUrl
 
                             }
+                            
+                            ModelNotification.UserData.post(data: Model.this_user)
+
 
                         }
 //                        MOVE HERE
@@ -83,12 +84,6 @@ class LoginController: UIViewController {
                     }
                 }
             })
-        }
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationViewController = segue.destination as? EventLoginController {
-            destinationViewController.user_email = self.user_email
         }
     }
     

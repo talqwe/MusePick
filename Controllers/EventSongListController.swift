@@ -12,7 +12,6 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     var event_id: String = ""
-    var user_email: String = ""
     var data = [Song]()
 
     
@@ -40,7 +39,6 @@ class EventSongListController: UIViewController,UITableViewDelegate, UITableView
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? AddSongController {
             destinationViewController.event_id = event_id
-            destinationViewController.user_email = self.user_email
         }
     }
     

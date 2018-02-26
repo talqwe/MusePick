@@ -10,8 +10,6 @@ import Foundation
 import UIKit
 import Firebase
 
-let notifySongListUpdate = "com.musepick.NotifySongListUpdate"
-
 class ModelNotificationBase<T>{
     var name:String?
     
@@ -28,12 +26,19 @@ class ModelNotificationBase<T>{
     }
     
     func post(data:T){
+        let type_name = type(of: data)
+        if(String(describing: type_name) == "User"){
+            let u = data as! User
+            print("EMAIL:"+u.email)
+        }
         NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
     }
 }
 
 class ModelNotification{
     static let SongList = ModelNotificationBase<[Song]>(name: "SongListNotification")
+    static let UserData = ModelNotificationBase<User>(name: "UserDataNotification")
+
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)

@@ -15,7 +15,7 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var SelfieButton: UIButton!
     var image_changed: Int = 0
     var event_id: String = ""
-    var user_email: String = ""
+    var this_user = User()
     
     @IBAction func TakeASelfie(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -56,7 +56,7 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
             
             Model.instance.saveImage(image: image!, name:"image:user:"+Model.this_user.email){(url) in
                 s.image = url
-                Model.instance.addSong(s: s, email: self.user_email)
+                Model.instance.addSong(s: s, email: self.this_user.email)
                 
             }
             
@@ -73,5 +73,17 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        _ = ModelNotification.UserData.observe { (list) in
+            if list != nil {
+                self.this_user.email = list!.email
+                self.this_user.last_name = list!.last_name
+                self.this_user.first_name = list!.first_name
+                self.this_user.image_url = list!.image_url
+                self.this_user.last_update = list!.last_update
+                self.this_user.login_type = list!.login_type
+
+            }
+        }
     }
 }
