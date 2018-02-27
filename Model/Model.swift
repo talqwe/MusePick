@@ -26,19 +26,13 @@ class ModelNotificationBase<T>{
     }
     
     func post(data:T){
-        let type_name = type(of: data)
-        if(String(describing: type_name) == "User"){
-            let u = data as! User
-            print("EMAIL:"+u.email)
-        }
         NotificationCenter.default.post(name: NSNotification.Name(name!), object: self, userInfo: ["data":data])
     }
 }
 
 class ModelNotification{
     static let SongList = ModelNotificationBase<[Song]>(name: "SongListNotification")
-    static let UserData = ModelNotificationBase<User>(name: "UserDataNotification")
-
+    static let LikeList = ModelNotificationBase<Dictionary<String,Like>>(name: "LikeListNotification")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)
@@ -63,10 +57,8 @@ class Model {
     // calls the add new User function to the local DB and the firebase, post the imgUrl to the observer
     func addUser(u:User){
         ModelFirebase.AddUser(u: u){(error) in
-            //st.addUserToLocalDb(database: self.modelSql?.database)
         }
         u.addUserToLocalDb(database: self.sql_model?.database)
-//        ModelNotification.ImgURL.post(data: st.imageUrl!)
     }
     
     // add new User to local DB
@@ -110,11 +102,22 @@ class Model {
         }
     }
     
+    func getLikesByEventId(id:String, callback:@escaping (Dictionary<String,Like>)->Void){
+        ModelFirebase.getLikesByEventID(eventID: id) { (s) in
+            callback(s)
+        }
+    }
+    
     static func getAllSongsAndObserve(eventID: String) {
         ModelFirebase.getSongsByEventID(eventID: eventID, callback: { (list) in
             ModelNotification.SongList.post(data: list!)
         })
-        
+    }
+    
+    static func getAllLikesAndObserve(eventID: String) {
+        ModelFirebase.getLikesByEventID(eventID: eventID, callback: { (list) in
+            ModelNotification.LikeList.post(data: list)
+        })
     }
     
     // saves the profile image to firebase (storage) and local DB

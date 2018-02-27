@@ -68,11 +68,32 @@ class ModelFirebase {
                 var songs = [Song]()
                 for json in values{
                     let s = Song(json: json.value)
-                    songs.append(s)
+                    if(s.event_id == eventID){
+                        songs.append(s)
+                    }
                 }
                 callback(songs)
             }else{
                 callback(nil)
+            }
+        })
+    }
+    
+    static func getLikesByEventID(eventID: String, callback:@escaping (Dictionary<String,Like>)->Void){
+        let ref = Database.database().reference().child("likes")
+        
+        ref.observe(.value, with: { (snapshot) in
+            if let values = snapshot.value as? [String:[String:Any]]{
+                var likes = Dictionary<String,Like>()
+                for json in values{
+                    let l = Like(json: json.value)
+                    if(l.event_id == eventID){
+                        likes[l.user_email+":"+l.artist_name+":"+l.song_name] = l
+                    }
+                }
+                callback(likes)
+            }else{
+                callback(Dictionary<String,Like>())
             }
         })
     }

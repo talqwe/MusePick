@@ -23,12 +23,11 @@ class Song {
         self.last_update = s.last_update
     }
     
-    init(event_id: String, song_name: String, artist_name: String, image: String, last_update: Date) {
+    init(event_id: String, song_name: String, artist_name: String, image: String) {
         self.event_id = event_id
         self.song_name = song_name
         self.artist_name = artist_name
         self.image = image
-        self.last_update = last_update
     }
     
     init(){
