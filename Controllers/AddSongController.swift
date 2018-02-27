@@ -14,8 +14,6 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var SongNameInput: UITextField!
     @IBOutlet weak var SelfieButton: UIButton!
     var image_changed: Int = 0
-    var event_id: String = ""
-    var this_user = User()
     
     @IBAction func TakeASelfie(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
@@ -50,13 +48,13 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
         let artist = ArtistNameInput.text!
 
         if(song_name != "" && artist != "" && image_changed == 1){
-            let s = Song(event_id: Model.this_event.id_code, song_name: song_name, artist_name: artist, image: "", last_update: Date.fromFirebase(Date().toFirebase()))
+            let s = Song(event_id: Model.this_event.id_code, song_name: song_name, artist_name: artist, image: "")
             
             let image = SelfieButton.backgroundImage(for: UIControlState.normal)
             
-            Model.instance.saveImage(image: image!, name:"image:user:"+Model.this_user.email){(url) in
+            Model.instance.saveImage(image: image!, name:"image:song:"+song_name+":"+artist){(url) in
                 s.image = url
-                Model.instance.addSong(s: s, email: self.this_user.email)
+                Model.instance.addSong(s: s, email: Model.this_user.email)
                 
             }
             
@@ -74,16 +72,6 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        _ = ModelNotification.UserData.observe { (list) in
-            if list != nil {
-                self.this_user.email = list!.email
-                self.this_user.last_name = list!.last_name
-                self.this_user.first_name = list!.first_name
-                self.this_user.image_url = list!.image_url
-                self.this_user.last_update = list!.last_update
-                self.this_user.login_type = list!.login_type
-
-            }
-        }
+        
     }
 }
