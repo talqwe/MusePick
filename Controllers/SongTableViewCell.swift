@@ -33,11 +33,11 @@ class SongTableViewCell: UITableViewCell {
     func LikeHandle(c: SongTableViewCell) {
         if(c.is_like){
             c.is_like = false
-            c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!+1)
+            c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!-1)
             c.HeartImage.setBackgroundImage(UIImage(named: "emptyheart"), for: UIControlState.normal)
         }else{
             c.is_like = true
-            c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!-1)
+            c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!+1)
             c.HeartImage.setBackgroundImage(UIImage(named: "fullheart"), for: UIControlState.normal)
             let s = Song(event_id: Model.this_event.id_code, song_name: c.SongName.text!, artist_name: c.ArtistName.text!, image: "")
             Model.instance.addLike(s: s, email: Model.this_user.email)
