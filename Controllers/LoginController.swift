@@ -48,16 +48,15 @@ class LoginController: UIViewController {
                     let email = data["email"]!
                     let first_name = data["first_name"]!
                     let last_name = data["last_name"]!
+                    let emailwithoutdots=email.replacingOccurrences(of: ".", with: ",")
                     
                     Model.instance.getUserById(id: email as! String) { (user) in
                         if(user != nil){
                             // save to sqlite
                             Model.instance.addNewUserToLocalDB(u: user!)
                             Model.this_user = User(u: user!)
-                            ModelNotification.UserData.post(data: user!)
                         }
                         else{
-                            let emailwithoutdots=email.replacingOccurrences(of: ".", with: ",")
 
 
                             let user = User(email: emailwithoutdots, fn: first_name as! String, ln: last_name as! String, iu: "", lt: "FB") //register without image profile
@@ -74,10 +73,6 @@ class LoginController: UIViewController {
                                 Model.instance.addUser(u: Model.this_user) //+imageUrl
 
                             }
-                            
-                            ModelNotification.UserData.post(data: Model.this_user)
-
-
                         }
 //                        MOVE HERE
                         self.performSegue(withIdentifier: "AfterLoginSegue", sender: self)
@@ -90,8 +85,6 @@ class LoginController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
 }
 
 
