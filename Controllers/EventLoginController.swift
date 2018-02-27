@@ -33,12 +33,6 @@ class EventLoginController: UIViewController {
         
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destinationViewController = segue.destination as? EventSongListController {
-            destinationViewController.event_id = EventCode.text!
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboard()
