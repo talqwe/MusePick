@@ -54,7 +54,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.80151527494976316" blue="0.26723422396083141" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="ZnQ-5z-RI3"/>
                     </view>
                     <connections>
@@ -112,16 +112,12 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n7-fx-Znn">
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n7-fx-Znn">
                                                     <rect key="frame" x="333" y="6" width="36" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <color key="tintColor" red="1" green="0.066029909090000005" blue="0.44619418109999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    <size key="titleShadowOffset" width="10" height="10"/>
-                                                    <state key="normal" backgroundImage="emptyheart">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                    </state>
+                                                    <state key="normal" backgroundImage="emptyheart"/>
                                                     <connections>
                                                         <action selector="HeartAction:" destination="Pvc-Y5-XVg" eventType="touchUpInside" id="QcP-Rp-lBp"/>
                                                     </connections>
@@ -229,9 +225,6 @@
                                 <state key="normal" title="Take a Photo" backgroundImage="selfie-512">
                                     <color key="titleColor" red="1" green="0.066029909092352068" blue="0.4461941810868878" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="TakeASelfie:" destination="wqu-EN-E4b" eventType="touchUpInside" id="F1Y-fp-y25"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDn-29-XAI">
                                 <rect key="frame" x="140" y="617" width="94" height="30"/>
@@ -241,8 +234,24 @@
                                     <action selector="SendSong:" destination="wqu-EN-E4b" eventType="touchUpInside" id="tIS-QR-L26"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yv2-0e-cgX">
+                                <rect key="frame" x="48" y="545" width="46" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Gallery"/>
+                                <connections>
+                                    <action selector="GalleryButton:" destination="wqu-EN-E4b" eventType="touchUpInside" id="a7X-ms-tso"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ti2-Q5-ECs">
+                                <rect key="frame" x="48" y="491" width="46" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Camera"/>
+                                <connections>
+                                    <action selector="CameraButton:" destination="wqu-EN-E4b" eventType="touchUpInside" id="Xyy-pc-7tU"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.08011502228544487" blue="0.42372935191685113" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="BdF-Qg-99C"/>
                     </view>
                     <connections>
@@ -263,20 +272,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="59r-GU-nes">
-                                <rect key="frame" x="9" y="180" width="375" height="129"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5w-pJ-yHo">
-                                <rect key="frame" x="30" y="392" width="332" height="71"/>
+                                <rect key="frame" x="30" y="385" width="332" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="facebook"/>
                                 <connections>
                                     <action selector="FacebookLoginWithSender:" destination="0DK-Sq-w8r" eventType="touchUpInside" id="zbK-Eq-tEM"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="59r-GU-nes">
+                                <rect key="frame" x="0.0" y="103" width="375" height="129"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.81984399150145282" green="1" blue="0.53794817664856864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="he2-iS-BPV"/>
                     </view>
                     <connections>
@@ -286,30 +295,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zbr-fr-9sS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1604" y="36.431784107946029"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="first" id="BYZ-38-t0r" customClass="ViewController" customModule="MusePick_master" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="0TI-ye-K56">
-                                <rect key="frame" x="0.0" y="255" width="375" height="157"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                    <connections>
-                        <segue destination="0DK-Sq-w8r" kind="show" identifier="PreLoginSegue" id="CWu-QH-946"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="669.60000000000002" y="37.331334332833585"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gpT-wk-XXb">
@@ -331,6 +316,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Camera" width="360" height="358"/>
+        <image name="Gallery" width="150" height="150"/>
         <image name="emptyheart" width="2400" height="2137"/>
         <image name="facebook" width="564" height="126"/>
         <image name="logo" width="391" height="153"/>

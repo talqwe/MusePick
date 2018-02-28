@@ -26,7 +26,6 @@
 		5E6B76CB203889D00041E25D /* EventSql.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76CA203889D00041E25D /* EventSql.swift */; };
 		5E6B76D02039EF240041E25D /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */; };
 		5EB4F8A3202605D300C1EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */; };
-		5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A4202605D300C1EB0B /* ViewController.swift */; };
 		5EB4F8A8202605D300C1EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A6202605D300C1EB0B /* Main.storyboard */; };
 		5EB4F8AA202605D300C1EB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8A9202605D300C1EB0B /* Assets.xcassets */; };
 		5EB4F8AD202605D300C1EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5EB4F8AB202605D300C1EB0B /* LaunchScreen.storyboard */; };
@@ -171,7 +170,6 @@
 		5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		5EB4F89F202605D300C1EB0B /* MusePick-master.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MusePick-master.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EB4F8A2202605D300C1EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5EB4F8A4202605D300C1EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5EB4F8A7202605D300C1EB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5EB4F8A9202605D300C1EB0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EB4F8AC202605D300C1EB0B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -295,7 +293,6 @@
 				5EB4F8D02026086C00C1EB0B /* LoginController.swift */,
 				5ECF61BB2026119A00F45790 /* EventLoginController.swift */,
 				5ECF61BD2026120200F45790 /* EventSongListController.swift */,
-				5EB4F8A4202605D300C1EB0B /* ViewController.swift */,
 				5E6B76CF2039EF240041E25D /* UIViewControllerExt.swift */,
 				5E2CF107203B776E00A84125 /* SongTableViewCell.swift */,
 				5E2CF10E203F471B00A84125 /* AddSongController.swift */,
@@ -795,7 +792,6 @@
 				5E2CF1172041FE8800A84125 /* LastUpdateTable.swift in Sources */,
 				5E6B76C9203889BE0041E25D /* Event.swift in Sources */,
 				5E6B76CB203889D00041E25D /* EventSql.swift in Sources */,
-				5EB4F8A5202605D300C1EB0B /* ViewController.swift in Sources */,
 				5E6B7696203748E60041E25D /* User.swift in Sources */,
 				5E6B76B420375C820041E25D /* Model.swift in Sources */,
 				5EB4F8D12026086C00C1EB0B /* LoginController.swift in Sources */,
