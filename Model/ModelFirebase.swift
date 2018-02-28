@@ -79,21 +79,25 @@ class ModelFirebase {
         })
     }
     
-    static func getLikesByEventID(eventID: String, callback:@escaping (Dictionary<String,Like>)->Void){
+    static func removeLike(identifier: String){
+        let ref = Database.database().reference().child("likes").child(identifier)
+        ref.removeValue { error, _ in
+        }
+    }
+    
+    static func getLikesByEventID(eventID: String, callback:@escaping ([Like])->Void){
         let ref = Database.database().reference().child("likes")
         
         ref.observe(.value, with: { (snapshot) in
             if let values = snapshot.value as? [String:[String:Any]]{
-                var likes = Dictionary<String,Like>()
+                var likes = [Like]()
                 for json in values{
                     let l = Like(json: json.value)
-                    if(l.event_id == eventID){
-                        likes[l.user_email+":"+l.artist_name+":"+l.song_name] = l
-                    }
+                    likes.append(l)
                 }
                 callback(likes)
             }else{
-                callback(Dictionary<String,Like>())
+                callback([])
             }
         })
     }

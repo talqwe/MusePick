@@ -32,7 +32,7 @@ class ModelNotificationBase<T>{
 
 class ModelNotification{
     static let SongList = ModelNotificationBase<[Song]>(name: "SongListNotification")
-    static let LikeList = ModelNotificationBase<Dictionary<String,Like>>(name: "LikeListNotification")
+    static let LikeList = ModelNotificationBase<[Like]>(name: "LikeListNotification")
     
     static func removeObserver(observer:Any){
         NotificationCenter.default.removeObserver(observer)
@@ -102,10 +102,14 @@ class Model {
         }
     }
     
-    func getLikesByEventId(id:String, callback:@escaping (Dictionary<String,Like>)->Void){
+    func getLikesByEventId(id:String, callback:@escaping ([Like])->Void){
         ModelFirebase.getLikesByEventID(eventID: id) { (s) in
             callback(s)
         }
+    }
+    
+    func removeLike(identifier: String){
+        ModelFirebase.removeLike(identifier: identifier)
     }
     
     static func getAllSongsAndObserve(eventID: String) {

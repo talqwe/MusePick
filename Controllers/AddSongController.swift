@@ -14,12 +14,21 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     @IBOutlet weak var SongNameInput: UITextField!
     @IBOutlet weak var SelfieButton: UIButton!
     var image_changed: Int = 0
-    
-    @IBAction func TakeASelfie(_ sender: Any) {
+    @IBAction func GalleryButton(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
             imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    @IBAction func CameraButton(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self as UIImagePickerControllerDelegate & UINavigationControllerDelegate
+            imagePicker.sourceType = .camera
             imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
@@ -52,7 +61,7 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
             
             let image = SelfieButton.backgroundImage(for: UIControlState.normal)
             
-            Model.instance.saveImage(image: image!, name:"image:song:"+song_name+":"+artist){(url) in
+            Model.instance.saveImage(image: image!, name:"image_song_"+song_name+"_"+artist){(url) in
                 s.image = url
                 Model.instance.addSong(s: s, email: Model.this_user.email)
                 
@@ -71,7 +80,7 @@ class AddSongController: UIViewController, UINavigationControllerDelegate, UIIma
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationItem.title = "Add Muse!"
         
     }
 }

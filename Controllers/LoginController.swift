@@ -68,7 +68,7 @@ class LoginController: UIViewController {
                             let FBid = data["id"] as? String
                             let url = NSURL(string: "https://graph.facebook.com/\(FBid!)/picture?type=large&return_ssl_resources=1")
                             let image = UIImage(data: NSData(contentsOf: url! as URL)! as Data)
-                            Model.instance.saveImage(image: image!, name:"image:user:"+Model.this_user.email){(url) in
+                            Model.instance.saveImage(image: image!, name:"image_user_"+Model.this_user.email){(url) in
                                 Model.this_user.image_url = url //save url to current Student
                                 Model.instance.addUser(u: Model.this_user) //+imageUrl
 

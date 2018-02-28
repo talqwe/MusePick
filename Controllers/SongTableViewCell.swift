@@ -35,6 +35,7 @@ class SongTableViewCell: UITableViewCell {
             c.is_like = false
             c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!-1)
             c.HeartImage.setBackgroundImage(UIImage(named: "emptyheart"), for: UIControlState.normal)
+            Model.instance.removeLike(identifier: Model.this_event.id_code+":"+Model.this_user.email+":"+c.ArtistName.text!+":"+c.SongName.text!)
         }else{
             c.is_like = true
             c.like_counter_label.text! = String(Int(c.like_counter_label.text!)!+1)
